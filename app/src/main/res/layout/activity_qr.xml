@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Qr">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/RL_InfoGener"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+            android:background="@drawable/logo" />
+
+
+
+        <LinearLayout
+            android:id="@+id/llTitulos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_centerVertical="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/ivIcoPlastico"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/icoplastico" />
+                <TextView
+                    android:id="@+id/tvPlastico"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#000"
+                    android:text="Plásticos"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:layout_gravity="left"
+                >
+
+                <ImageView
+                    android:id="@+id/ivIcoMetal"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/icometal" />
+                <TextView
+                    android:id="@+id/tvMetal"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#000"
+                    android:text="Metales"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+
+                >
+
+                <ImageView
+                    android:id="@+id/ivIcoOrganico"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/icoorganico" />
+                <TextView
+                    android:id="@+id/tvOrganico"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#000"
+                    android:text="Orgánicos"/>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/llTitulos">
+
+
+            <TextView
+                android:id="@+id/tvTacho1"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="20dp"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:text="100%"/>
+
+            <TextView
+                android:id="@+id/tvTacho2"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:layout_height="20dp"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:text="100%"/>
+
+            <TextView
+                android:id="@+id/tvTacho3"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:layout_height="20dp"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:text="100%"/>
+        </LinearLayout>
+
+
+
+        <ImageButton
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/llTitulos"
+            android:id="@+id/btnGuardar"
+            android:onClick="guardar"
+            android:background="@drawable/registrar"
+            android:layout_marginTop="100dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true">
+
+
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:id="@+id/btnInicio"
+                android:onClick="toHome"
+                android:background="@drawable/home1"/>
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:id="@+id/btnRecoger"
+                android:background="@drawable/qr2"/>
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:id="@+id/btnProgreso"
+                android:background="@drawable/record1"/>
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:id="@+id/btnRegistro"
+                android:onClick="logOut"
+                android:background="@drawable/exit2"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

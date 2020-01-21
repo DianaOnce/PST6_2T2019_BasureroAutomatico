@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Inicio">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/RL_InfoGener"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+            android:background="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/ivPlastic3"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/plastic3" />
+
+                <ImageView
+                    android:id="@+id/ivPlastic2"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/plastic2" />
+                <ImageView
+                    android:id="@+id/ivPlastic1"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/plastic1" />
+
+                <ImageView
+                    android:id="@+id/ivTacho1"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/ivPlastic3"
+                    android:layout_marginTop="-7dp"
+                    android:background="@drawable/tacho1" />
+
+
+                <ImageView
+                    android:id="@+id/ivIcoPlastico"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/icoplastico" />
+                <TextView
+                    android:id="@+id/tvTacho1"
+                    android:layout_toRightOf="@+id/ivIcoPlastico"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/ivPlastic3"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FFF"
+                    android:text="= 100%"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/ivLata3"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/lata3" />
+
+                <ImageView
+                    android:id="@+id/ivLata2"
+                    android:layout_width="90dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/lata2" />
+                <ImageView
+                    android:id="@+id/ivLata1"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/lata1" />
+
+                <ImageView
+                    android:id="@+id/ivTacho2"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/ivLata3"
+                    android:layout_marginTop="-7dp"
+                    android:background="@drawable/tacho2" />
+                <ImageView
+                    android:id="@+id/ivIcoMetal"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/icometal" />
+                <TextView
+                    android:id="@+id/tvTacho2"
+                    android:layout_toRightOf="@+id/ivIcoMetal"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/ivLata3"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FFF"
+                    android:text="= 100%"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/ivOrganico3"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/organico3" />
+
+                <ImageView
+                    android:id="@+id/ivOrganico2"
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/organico2" />
+                <ImageView
+                    android:id="@+id/ivOrganico1"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/organico1" />
+
+                <ImageView
+                    android:id="@+id/ivTacho3"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/ivOrganico3"
+                    android:layout_marginTop="-7dp"
+                    android:background="@drawable/tacho3" />
+                <ImageView
+                    android:id="@+id/ivIcoOrganico"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/icoorganico" />
+                <TextView
+                    android:id="@+id/tvTacho3"
+                    android:layout_toRightOf="@+id/ivIcoOrganico"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/ivOrganico3"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FFF"
+                    android:text="= 100%"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true">
+
+
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:id="@+id/btnInicio"
+                android:background="@drawable/home2"/>
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:id="@+id/btnRecoger"
+                android:onClick="toQr"
+                android:background="@drawable/qr1"/>
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:id="@+id/btnProgreso"
+                android:background="@drawable/record1"/>
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:id="@+id/btnRegistro"
+                android:onClick="logOut"
+                android:background="@drawable/exit2"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
