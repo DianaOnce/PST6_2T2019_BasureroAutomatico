@@ -198,6 +198,7 @@
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:id="@+id/btnInicio"
+                android:onClick="notificacion"
                 android:background="@drawable/home2"/>
             <ImageButton
                 android:layout_width="fill_parent"
@@ -213,6 +214,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="left"
                 android:id="@+id/btnProgreso"
+                android:onClick="toRetiro"
                 android:background="@drawable/record1"/>
             <ImageButton
                 android:layout_width="fill_parent"

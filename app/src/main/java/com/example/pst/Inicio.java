@@ -1,8 +1,12 @@
 package com.example.pst;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +39,10 @@ public class Inicio extends AppCompatActivity {
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
 
+
+    NotificationCompat.Builder notificacion;
+    private static final int idUnica = 51623;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +51,8 @@ public class Inicio extends AppCompatActivity {
         tvTacho1=(TextView) findViewById(R.id.tvTacho1);
         tvTacho2=(TextView) findViewById(R.id.tvTacho2);
         tvTacho3=(TextView) findViewById(R.id.tvTacho3);
-
+        notificacion = new NotificationCompat.Builder(this);
+        notificacion.setAutoCancel(true);
 
         new Thread(new Runnable() {
             public void run() {
@@ -61,9 +70,37 @@ public class Inicio extends AppCompatActivity {
         }).start();
     }
 
+    public void notificacion(){
+
+
+        notificacion.setSmallIcon(R.mipmap.ic_launcher);
+        notificacion.setTicker("Tacho lleno");
+        notificacion.setPriority(Notification.PRIORITY_HIGH);
+        notificacion.setWhen(System.currentTimeMillis());
+        notificacion.setContentTitle("Existe un tacho lleno");
+        notificacion.setContentText("Hay un tacho por retirar");
+
+        Intent intent = new Intent(Inicio.this,Inicio.class);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(Inicio.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        notificacion.setContentIntent(pendingIntent);
+
+
+        NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        nm.notify(idUnica,notificacion.build());
+
+
+    }
     public void toQr(View view){
 
         Intent i = new Intent(Inicio.this,Qr.class);
+        finish();
+        startActivity(i);
+    }
+
+    public void toRetiro(View view){
+
+        Intent i = new Intent(Inicio.this,Retiro.class);
         finish();
         startActivity(i);
     }
@@ -131,6 +168,7 @@ public class Inicio extends AppCompatActivity {
 
         protected void onPostExecute(String file_url) {
 
+
                     tvTacho1.setText(conversion(nivelPlastico));
                     tvTacho2.setText(conversion(nivelMetal));
                     tvTacho3.setText(conversion(nivelOrganico));
@@ -139,13 +177,14 @@ public class Inicio extends AppCompatActivity {
         }
     }
 
-
-
     public String conversion(String valor){
         if(valor.equals("0")){
             return "0%";
         }else {
             int valInt = Integer.valueOf(valor) * 20;
+            if (valInt==100){
+                notificacion();
+            }
             return "= " + String.valueOf(valInt) + "%";
         }
     }
@@ -153,7 +192,5 @@ public class Inicio extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
-
     }
 }
