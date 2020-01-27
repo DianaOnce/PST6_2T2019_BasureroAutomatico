@@ -114,6 +114,13 @@ public class Qr extends AppCompatActivity implements ZXingScannerView.ResultHand
         finish();
         startActivity(i);
     }
+
+    public void toRetiro(View view){
+
+        Intent i = new Intent(Qr.this,Retiro.class);
+        finish();
+        startActivity(i);
+    }
     public void logOut(View view){
 
         Intent i = new Intent(Qr.this,Login.class);
@@ -287,12 +294,13 @@ public class Qr extends AppCompatActivity implements ZXingScannerView.ResultHand
     public String comparaNivel(String valor){
         valor = valor.substring(2, valor.length() - 1);
         int valInt= Integer.valueOf(valor);
-        if (valInt<=40){
+
+        if(valInt==100){
             return "0";
-        }else {
-            return "1";
         }
+        return String.valueOf(valInt);
     }
+
 
 
     @Override

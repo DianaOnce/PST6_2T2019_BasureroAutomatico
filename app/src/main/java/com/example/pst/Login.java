@@ -118,7 +118,7 @@ public class Login extends AppCompatActivity {
 
                     SharedPreferences.Editor edit = preferences.edit();
 
-                    edit.putString("username", usuario);
+                    edit.putString("username", json.getString("idUsuario"));
                     edit.apply();
 
 

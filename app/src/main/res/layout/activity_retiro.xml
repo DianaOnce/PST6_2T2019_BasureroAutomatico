@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Inicio">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/RL_InfoGener"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+            android:background="@drawable/logo"
+            />
+
+
+        <ListView
+            android:id="@+id/listRetiros"
+            style="?android:attr/listViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_above="@+id/menu">
+
+        </ListView>
+
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true">
+
+
+
+
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:id="@+id/btnInicio"
+                android:onClick="toHome"
+                android:background="@drawable/home1"/>
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:id="@+id/btnRecoger"
+                android:onClick="toQr"
+                android:background="@drawable/qr1"/>
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:id="@+id/btnProgreso"
+                android:background="@drawable/record2"/>
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:id="@+id/btnRegistro"
+                android:onClick="logOut"
+                android:background="@drawable/exit2"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
